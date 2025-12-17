@@ -358,12 +358,15 @@ class MemoryController(BaseController):
             HTTPException: When request processing fails
         """
         try:
-            # Prioritize getting parameters from body, fallback to query params
-            try:
-                params = await fastapi_request.json()
-            except Exception:
-                # If no body, get from query params (backward compatibility)
-                params = dict(fastapi_request.query_params)
+            # Get params from query params first
+            params = dict(fastapi_request.query_params)
+
+            # Also try to get params from body (for GET + body requests)
+            if body := await fastapi_request.body():
+                with suppress(json.JSONDecodeError, TypeError):
+                    if isinstance(body_data := json.loads(body), dict):
+                        params.update(body_data)
+
             logger.info(
                 "Received fetch request: user_id=%s, memory_type=%s",
                 params.get("user_id"),
