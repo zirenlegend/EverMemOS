@@ -314,7 +314,7 @@ async def _trigger_profile_extraction(
 
         # ===== Extract and save profiles =====
 
-        # Load old profiles (same for V1 and V2)
+        # Load old profiles (same for Work and Life)
         old_profiles_dict = await profile_repo.get_all_profiles(group_id=group_id)
         old_profiles = list(old_profiles_dict.values()) if old_profiles_dict else []
         logger.info(
@@ -350,10 +350,9 @@ async def _trigger_profile_extraction(
                     profile_data = profile.to_dict()
                     metadata = {
                         "group_id": group_id,
-                        "scenario": "assistant",
+                        "scenario": ScenarioType.ASSISTANT.value,
                         "cluster_id": cluster_id,
                         "memcell_count": cluster_memcell_count,
-                        "profile_version": "v2",
                         "total_items": profile.total_items(),
                     }
                 else:
