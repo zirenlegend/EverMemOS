@@ -124,14 +124,13 @@ requests.post(f"{API_BASE}/memories", json={
 response = requests.get(f"{API_BASE}/memories/search", json={
     "query": "What sports does the user like?",
     "user_id": "user_001",
-    "data_source": "episode",
-    "memory_scope": "personal",
-    "retrieval_mode": "rrf"
+    "memory_types": ["episodic_memory"],
+    "retrieve_method": "hybrid"
 })
 
-memories = response.json()
-for memory in memories.get("results", []):
-    print(f"Memory: {memory['content']}")
+result = response.json().get("result", {})
+for memory_group in result.get("memories", []):
+    print(f"Memory: {memory_group}")
 ```
 
 **Try it now**: `uv run python src/bootstrap.py demo/simple_demo.py` ([Demo Guide](docs/usage/DEMOS.md))

@@ -41,11 +41,8 @@ Organize conversations by team or department within an organization.
 
 ```json
 {
-  "conversation_meta": {
-    "group_id": "dept_engineering",
-    "name": "Engineering Department",
-    "scene": "work"
-  }
+  "group_id": "dept_engineering",
+  "group_name": "Engineering Department"
 }
 ```
 
@@ -60,10 +57,8 @@ Group all conversations related to a specific project.
 
 ```json
 {
-  "conversation_meta": {
-    "group_id": "project_mobile_app_v2",
-    "name": "Mobile App v2.0 Development"
-  }
+  "group_id": "project_mobile_app_v2",
+  "group_name": "Mobile App v2.0 Development"
 }
 ```
 
@@ -78,10 +73,8 @@ Isolate memories between different customers or organizations.
 
 ```json
 {
-  "conversation_meta": {
-    "group_id": "tenant_acme_corp",
-    "name": "ACME Corporation"
-  }
+  "group_id": "tenant_acme_corp",
+  "group_name": "ACME Corporation"
 }
 ```
 
@@ -96,19 +89,15 @@ Mirror your communication platform's channel structure.
 
 ```json
 {
-  "conversation_meta": {
-    "group_id": "channel_general",
-    "name": "#general"
-  }
+  "group_id": "channel_general",
+  "group_name": "#general"
 }
 ```
 
 ```json
 {
-  "conversation_meta": {
-    "group_id": "channel_random",
-    "name": "#random"
-  }
+  "group_id": "channel_random",
+  "group_name": "#random"
 }
 ```
 
@@ -123,10 +112,8 @@ Group support tickets or customer interactions.
 
 ```json
 {
-  "conversation_meta": {
-    "group_id": "support_ticket_12345",
-    "name": "Ticket #12345 - Login Issue"
-  }
+  "group_id": "support_ticket_12345",
+  "group_name": "Ticket #12345 - Login Issue"
 }
 ```
 
@@ -141,10 +128,8 @@ Organize meeting notes and transcripts.
 
 ```json
 {
-  "conversation_meta": {
-    "group_id": "meeting_weekly_standup_2025_02",
-    "name": "Weekly Standup - February 2025"
-  }
+  "group_id": "meeting_weekly_standup_2025_02",
+  "group_name": "Weekly Standup - February 2025"
 }
 ```
 
