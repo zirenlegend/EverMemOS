@@ -154,8 +154,8 @@ requests.post(
 | `group_id` | string | No | Unique identifier for the conversation group |
 | `name` | string | Yes | Human-readable name for the conversation |
 | `description` | string | No | Description of the conversation context |
-| `scene` | string | No | Scene type: `company` (1:1 with AI) or `work` (group chat) |
-| `scene_desc` | object | No | Scene-specific details (e.g., `description` for company scene) |
+| `scene` | string | No | Scene type: `assistant` (1:1 with AI) or `group_chat` (group chat) |
+| `scene_desc` | object | No | Scene-specific details (e.g., `description` for assistant scene) |
 | `default_timezone` | string | No | IANA timezone name (e.g., `America/New_York`) |
 | `user_details` | object | Yes | Dictionary of user information keyed by user ID |
 | `tags` | array | No | List of tags for categorization |
@@ -253,7 +253,7 @@ response = requests.post(
     "http://localhost:8001/api/v1/memories/conversation-meta",
     json={
         "group_id": "team_engineering",
-        "scene": "work",
+        "scene": "group_chat",
         "name": "Engineering Team",
         "description": "Backend engineering team discussions",
         "default_timezone": "America/Los_Angeles",

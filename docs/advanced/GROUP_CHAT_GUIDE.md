@@ -134,7 +134,7 @@ Organize meeting notes and transcripts.
   "conversation_meta": {
     "group_id": "team_001",
     "name": "Engineering Team",
-    "scene": "work",
+    "scene": "group_chat",
     "scene_desc": {},
     "user_details": {
       "alice": {
@@ -180,7 +180,7 @@ Organize meeting notes and transcripts.
 |-------|----------|-------------|
 | `group_id` | Yes | Unique identifier for filtering and retrieval |
 | `name` | No | Human-readable group name |
-| `scene` | No | Scene type: `company` (1:1 with AI) or `work` (group chat) |
+| `scene` | No | Scene type: `assistant` (1:1 with AI) or `group_chat` (group chat) |
 | `user_details` | No | Participant information for context |
 
 ---
@@ -329,8 +329,8 @@ Providing user details improves memory quality:
 
 ### 3. Use Appropriate Scene Types
 
-- Use `work` for multi-person group chats
-- Use `company` for 1:1 conversations with an AI assistant
+- Use `group_chat` for multi-person group chats
+- Use `assistant` for 1:1 conversations with an AI assistant
 
 ### 4. Batch Related Messages
 
