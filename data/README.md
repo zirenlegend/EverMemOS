@@ -33,14 +33,15 @@ All conversation data files follow the standardized [GroupChatFormat](../data_fo
 {
   "version": "1.0.0",
   "conversation_meta": {
-    "scene": "work",
+    "scene": "group_chat",
     "scene_desc": {},
     "group_id": "group_001",
     "name": "Project Discussion Group",
     "user_details": {
       "user_101": {
         "full_name": "Alice",
-        "role": "Product Manager"
+        "role": "user",
+        "custom_role": "Product Manager"
       }
     }
   },

@@ -141,7 +141,7 @@ Organize meeting notes and transcripts.
         "full_name": "Alice Smith",
         "role": "user",
         "custom_role": "Tech Lead",
-        "department": "Engineering"
+        "extra": {"department": "Engineering"}
       },
       "bob": {
         "full_name": "Bob Jones",

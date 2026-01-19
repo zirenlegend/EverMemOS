@@ -113,7 +113,7 @@ Optional reranking step to improve result relevance:
 - **Prioritization** of most critical information
 - **High throughput** stability
 
-Enable reranking by setting `use_rerank: true` (implementation-dependent).
+Reranking is automatically applied for `hybrid` and `agentic` retrieval methods. For programmatic control, see the [Agentic Retrieval Guide](../dev_docs/agentic_retrieval_guide.md).
 
 ---
 
