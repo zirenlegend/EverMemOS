@@ -36,7 +36,6 @@ EverMemOS uses a standardized **GroupChatFormat** for batch operations. This for
 - Conversation metadata (group info, user details)
 - Multi-speaker conversations
 - Timestamps and message IDs
-- Flexible scene types (work, social, family, etc.)
 
 For complete format specifications, see [Group Chat Format Specification](../../data_format/group_chat/group_chat_format.md).
 
@@ -145,7 +144,7 @@ The `--scene` parameter specifies the memory extraction strategy:
 
 **conversation_meta:**
 - `description` (string) - Group description
-- `scene` (string) - Internal scene descriptor (work, social, family, etc.)
+- `scene` (string) - Internal scene descriptor (group_chat or assistant)
 - `timezone` (string) - Timezone for the conversation
 
 **conversation_list:**
@@ -196,7 +195,7 @@ The `--scene` parameter specifies the memory extraction strategy:
     "group_id": "family_chat_001",
     "name": "Smith Family",
     "description": "Family group chat",
-    "scene": "family",
+    "scene": "group_chat",
     "timezone": "America/New_York",
     "user_details": {
       "mom": {
